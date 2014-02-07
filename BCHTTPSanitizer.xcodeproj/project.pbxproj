@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		43EB7B1118A487E20045305E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EB7B1018A487E20045305E /* Cocoa.framework */; };
-		43EB7B1B18A487E20045305E /* BCHTTPSanitizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 43EB7B1A18A487E20045305E /* BCHTTPSanitizer.m */; };
 		43EB7B2218A487E20045305E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EB7B2118A487E20045305E /* XCTest.framework */; };
 		43EB7B2318A487E20045305E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EB7B1018A487E20045305E /* Cocoa.framework */; };
 		43EB7B2618A487E20045305E /* libBCHTTPSanitizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EB7B0D18A487E20045305E /* libBCHTTPSanitizer.a */; };
 		43EB7B2C18A487E20045305E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43EB7B2A18A487E20045305E /* InfoPlist.strings */; };
-		43EB7B2E18A487E20045305E /* BCHTTPSanitizerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43EB7B2D18A487E20045305E /* BCHTTPSanitizerTests.m */; };
+		43EB7B3D18A488020045305E /* BCHTTPSanitizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 43EB7B3718A488020045305E /* BCHTTPSanitizer.m */; };
+		43EB7B3E18A488020045305E /* BCHTTPResponseSanitizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 43EB7B3818A488020045305E /* BCHTTPResponseSanitizer.m */; };
+		43EB7B3F18A488020045305E /* BCHTTPRequestSantizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 43EB7B3918A488020045305E /* BCHTTPRequestSantizer.h */; };
+		43EB7B4018A488020045305E /* BCHTTPRequestSantizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 43EB7B3A18A488020045305E /* BCHTTPRequestSantizer.m */; };
+		43EB7B4118A488020045305E /* BCHTTPResponseSanitizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 43EB7B3B18A488020045305E /* BCHTTPResponseSanitizer.h */; };
+		43EB7B4218A488020045305E /* BCHTTPSanitizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 43EB7B3C18A488020045305E /* BCHTTPSanitizer.h */; };
+		43EB7B4618A4882D0045305E /* BCHTTPSanitizerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43EB7B4318A4882D0045305E /* BCHTTPSanitizerTests.m */; };
+		43EB7B4718A4882D0045305E /* BCHTTPResponseSanitizerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43EB7B4418A4882D0045305E /* BCHTTPResponseSanitizerTests.m */; };
+		43EB7B4818A4882D0045305E /* BCHTTPRequestSanitizerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43EB7B4518A4882D0045305E /* BCHTTPRequestSanitizerTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,13 +40,19 @@
 		43EB7B1418A487E20045305E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		43EB7B1518A487E20045305E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		43EB7B1818A487E20045305E /* BCHTTPSanitizer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BCHTTPSanitizer-Prefix.pch"; sourceTree = "<group>"; };
-		43EB7B1918A487E20045305E /* BCHTTPSanitizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCHTTPSanitizer.h; sourceTree = "<group>"; };
-		43EB7B1A18A487E20045305E /* BCHTTPSanitizer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCHTTPSanitizer.m; sourceTree = "<group>"; };
 		43EB7B2018A487E20045305E /* BCHTTPSanitizerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BCHTTPSanitizerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43EB7B2118A487E20045305E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		43EB7B2918A487E20045305E /* BCHTTPSanitizerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BCHTTPSanitizerTests-Info.plist"; sourceTree = "<group>"; };
 		43EB7B2B18A487E20045305E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		43EB7B2D18A487E20045305E /* BCHTTPSanitizerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCHTTPSanitizerTests.m; sourceTree = "<group>"; };
+		43EB7B3718A488020045305E /* BCHTTPSanitizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCHTTPSanitizer.m; sourceTree = "<group>"; };
+		43EB7B3818A488020045305E /* BCHTTPResponseSanitizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCHTTPResponseSanitizer.m; sourceTree = "<group>"; };
+		43EB7B3918A488020045305E /* BCHTTPRequestSantizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCHTTPRequestSantizer.h; sourceTree = "<group>"; };
+		43EB7B3A18A488020045305E /* BCHTTPRequestSantizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCHTTPRequestSantizer.m; sourceTree = "<group>"; };
+		43EB7B3B18A488020045305E /* BCHTTPResponseSanitizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCHTTPResponseSanitizer.h; sourceTree = "<group>"; };
+		43EB7B3C18A488020045305E /* BCHTTPSanitizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCHTTPSanitizer.h; sourceTree = "<group>"; };
+		43EB7B4318A4882D0045305E /* BCHTTPSanitizerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCHTTPSanitizerTests.m; sourceTree = "<group>"; };
+		43EB7B4418A4882D0045305E /* BCHTTPResponseSanitizerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCHTTPResponseSanitizerTests.m; sourceTree = "<group>"; };
+		43EB7B4518A4882D0045305E /* BCHTTPRequestSanitizerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCHTTPRequestSanitizerTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,8 +119,12 @@
 		43EB7B1618A487E20045305E /* BCHTTPSanitizer */ = {
 			isa = PBXGroup;
 			children = (
-				43EB7B1918A487E20045305E /* BCHTTPSanitizer.h */,
-				43EB7B1A18A487E20045305E /* BCHTTPSanitizer.m */,
+				43EB7B3C18A488020045305E /* BCHTTPSanitizer.h */,
+				43EB7B3718A488020045305E /* BCHTTPSanitizer.m */,
+				43EB7B3918A488020045305E /* BCHTTPRequestSantizer.h */,
+				43EB7B3A18A488020045305E /* BCHTTPRequestSantizer.m */,
+				43EB7B3B18A488020045305E /* BCHTTPResponseSanitizer.h */,
+				43EB7B3818A488020045305E /* BCHTTPResponseSanitizer.m */,
 				43EB7B1718A487E20045305E /* Supporting Files */,
 			);
 			path = BCHTTPSanitizer;
@@ -124,7 +141,9 @@
 		43EB7B2718A487E20045305E /* BCHTTPSanitizerTests */ = {
 			isa = PBXGroup;
 			children = (
-				43EB7B2D18A487E20045305E /* BCHTTPSanitizerTests.m */,
+				43EB7B4318A4882D0045305E /* BCHTTPSanitizerTests.m */,
+				43EB7B4518A4882D0045305E /* BCHTTPRequestSanitizerTests.m */,
+				43EB7B4418A4882D0045305E /* BCHTTPResponseSanitizerTests.m */,
 				43EB7B2818A487E20045305E /* Supporting Files */,
 			);
 			path = BCHTTPSanitizerTests;
@@ -146,6 +165,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43EB7B4218A488020045305E /* BCHTTPSanitizer.h in Headers */,
+				43EB7B4118A488020045305E /* BCHTTPResponseSanitizer.h in Headers */,
+				43EB7B3F18A488020045305E /* BCHTTPRequestSantizer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,7 +252,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43EB7B1B18A487E20045305E /* BCHTTPSanitizer.m in Sources */,
+				43EB7B3D18A488020045305E /* BCHTTPSanitizer.m in Sources */,
+				43EB7B4018A488020045305E /* BCHTTPRequestSantizer.m in Sources */,
+				43EB7B3E18A488020045305E /* BCHTTPResponseSanitizer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,7 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43EB7B2E18A487E20045305E /* BCHTTPSanitizerTests.m in Sources */,
+				43EB7B4618A4882D0045305E /* BCHTTPSanitizerTests.m in Sources */,
+				43EB7B4818A4882D0045305E /* BCHTTPRequestSanitizerTests.m in Sources */,
+				43EB7B4718A4882D0045305E /* BCHTTPResponseSanitizerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

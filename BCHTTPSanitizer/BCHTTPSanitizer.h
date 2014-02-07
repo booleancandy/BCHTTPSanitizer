@@ -6,8 +6,17 @@
 //  Copyright (c) 2014 Boolean Candy Pty Ltd. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+//
+// Classes to encapsulate sanitising sensitive information from HTTP requests
+// and responses so they can be safely logged or otherwise distributed.
+//
 
 @interface BCHTTPSanitizer : NSObject
+
+- (void)redactValueForHeader:(NSString *)headerName;
+- (void)redactJSONKeyPath:(NSString *)keyPath;
+
+- (NSData *)sanitizeBody:(NSData *)body;
+- (NSDictionary *)sanitizeHeaders:(NSDictionary *)headers;
 
 @end
