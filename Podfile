@@ -1,0 +1,1 @@
+podspec :path => "BCHTTPSanitizer.podspec"
