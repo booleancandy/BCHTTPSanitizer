@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://twitter.com/BooleanCandy'
   s.source = {
     :git => 'https://github.com/booleancandy/BCHTTPSanitizer.git',
-    :tag => 'v#{version}'
+    :tag => "v#{version}"
   }
   s.source_files = 'BCHTTPSanitizer/*.[hm]'
   s.requires_arc = true
