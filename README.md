@@ -35,7 +35,15 @@ which produces the following output:
 2014-05-08 20:05:14.197 MyApp[16739:303] request headers: {
     "Content-Type" = "application/json";
 }
-2014-05-08 20:05:14.197 MyApp[16739:303] request body: {"auth":{"passwordCredentials":{"username":"REDACTED","password":"REDACTED"},"tenantName":"REDACTED"}}
+2014-05-08 20:05:14.197 MyApp[16739:303] request body: {
+  "auth": {
+    "passwordCredentials": {
+      "username": "REDACTED",
+      "password": "REDACTED"
+    },
+    "tenantName": "REDACTED"
+  }
+}
 ```
 
 Example of logging sanitized headers and body of a `NSURLResponse`:
@@ -69,7 +77,19 @@ which produces the following output:
     Pragma = "no-cache";
     Server = "HP-CS-Server";
 }
-2014-05-08 20:15:01.423 MyApp[16858:303] response body: {"access":{"token":{"expires":"2014-05-08T22:15:01.798Z","id":"REDACTED","tenant":{"id":"REDACTED","name":"REDACTED"}}, ... }}
+2014-05-08 20:15:01.423 MyApp[16858:303] response body: {
+  "access": {
+    "token": {
+      "expires": "2014-05-08T22:15:01.798Z",
+      "id": "REDACTED",
+      "tenant": {
+        "id": "REDACTED",
+        "name": "REDACTED"
+      }
+    },
+    ...
+  }
+}
 ```
 
 ### Sanitizing NSData and NSDictionary values
