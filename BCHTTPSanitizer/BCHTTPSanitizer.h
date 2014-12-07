@@ -18,5 +18,6 @@
 
 - (NSData *)sanitizeBody:(NSData *)body;
 - (NSDictionary *)sanitizeHeaders:(NSDictionary *)headers;
+- (id)sanitizeObject:(id)object;
 
 @end

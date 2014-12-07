@@ -49,6 +49,25 @@
     return result;
 }
 
+- (id)sanitizeObject:(id)object
+{
+    object = [object mutableCopy];
+
+    for (NSString *keyPath in self.redactedJSONKeyPaths) {
+
+        // KVC expresses unhappiness at non-compliance by throwing an exception
+
+        @try {
+            if ([object valueForKeyPath:keyPath])
+                [object setValue:@"REDACTED" forKeyPath:keyPath];
+        }
+        @catch (NSException *exception) {
+        }
+    }
+
+    return object;
+}
+
 - (NSData *)sanitizeBody:(NSData *)body
 {
     if (!body)
@@ -59,20 +78,8 @@
     
     if (error)
         return body;
-    
-    result = [result mutableCopy];
-    
-    for (NSString *keyPath in self.redactedJSONKeyPaths) {
-        
-        // KVC expresses unhappiness at non-compliance by throwing an exception
-        
-        @try {
-            if ([result valueForKeyPath:keyPath])
-                [result setValue:@"REDACTED" forKeyPath:keyPath];
-        }
-        @catch (NSException *exception) {
-        }
-    }
+
+    result = [self sanitizeObject:result];
     
     return [NSJSONSerialization dataWithJSONObject:result options:0 error:nil];
 }

@@ -106,4 +106,13 @@
     XCTAssertEqualObjects([result valueForKeyPath:@"1.2.3"], @"REDACTED", @"Deep keypath redaction failed");
 }
 
+- (void)testRedactObjectDictionary
+{
+    NSDictionary *dictionary = @{@"foo": @"bar"};
+
+    [self.sanitizer redactJSONKeyPath:@"foo"];
+    NSDictionary *result = [self.sanitizer sanitizeObject:dictionary];
+    XCTAssertEqualObjects(result, @{@"foo": @"REDACTED"}, @"Dictionary object redaction failed");
+}
+
 @end
